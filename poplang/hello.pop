@@ -1,0 +1,24 @@
+; Hello World program (ASCII representation)
+; Push "Hello World!\n" backwards since we pop the message backwards
+push 0
+push '\n'
+push '!'
+push 'd'
+push 'l'
+push 'r'
+push 'o'
+push 'W'
+push ' '
+push 'o'
+push 'l'
+push 'l'
+push 'e'
+push 'H'
+cout   ; Pop the character and print it
+dup    ; Duplicate the next character so we can test it
+zero 1 ; Check if the character == '\0', and skip the next instruction otherwise
+exit   ; Exit the program if the character == '\0'
+popq 5 ; Move backwards 5 instructions (to line 17 @ cout)
+
+; or without new lines:
+; push 0 push '\n' push '!' push 'd' push 'l' push 'r' push 'o' push 'W' push ' ' push 'o' push 'l' push 'l' push 'e' push 'H' cout dup zero 1 exit popq 5
